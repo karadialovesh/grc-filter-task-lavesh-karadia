@@ -5,7 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import time
 
-API_URL = "http://localhost:8000"
+API_URL = "https://grc-filter-task-lavesh-karadia-3.onrender.com"
 st.set_page_config(page_title="GRC Risk Assessment", layout="wide")
 
 def calculate_score(likelihood, impact):
