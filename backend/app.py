@@ -78,6 +78,11 @@ def get_compliance_hint(level: str) -> str:
     return ""
 
 # API Endpoints
+@app.get("/")
+def health():
+    return {"status": "ok"}
+
+
 @app.post("/assess-risk", response_model=RiskResponse)
 def assess_risk(risk: RiskCreate):
     # Extra check for HTTP 400 specifically
