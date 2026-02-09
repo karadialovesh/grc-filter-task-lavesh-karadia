@@ -240,7 +240,7 @@ if risks_data:
             width=550,
             height=550
         )
-        st.plotly_chart(fig, use_container_width=False)
+        st.plotly_chart(fig, width="content")
 
     with col_table:
         st.subheader("Risk Register")
@@ -275,7 +275,7 @@ if risks_data:
                 "Mitigation": st.column_config.TextColumn("Mitigation Action", width="large")
             },
             hide_index=True,
-            use_container_width=True # Responsive
+            width="content" # Responsive
         )
         
         # CSV Export
