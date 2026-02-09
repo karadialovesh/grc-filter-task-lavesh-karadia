@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field, validator
 import sqlite3
+import os
 from typing import List, Optional
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
@@ -124,5 +125,8 @@ def get_risks(level: Optional[str] = Query(None, description="Filter by risk lev
     
     return [dict(row) for row in rows]
 
+
+
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
