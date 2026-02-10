@@ -87,6 +87,12 @@ When no risks were present or when new risks were added, the dashboard needed to
 Technology choice trade-offs
 Although React was an option, Streamlit was chosen to prioritize correctness, data visualization, and faster iteration within the given time constraints.
 
+Recent Updates 
+
+Updated the frontend to use the deployed backend API instead of localhost to support cloud deployment.
+Improved frontend error handling to gracefully handle backend connectivity issues.
+
+
 Testing
 
 Basic unit tests are included to validate the most critical part of the system: the risk classification and compliance logic.
