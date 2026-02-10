@@ -91,7 +91,11 @@ Recent Updates
 
 Updated the frontend to use the deployed backend API instead of localhost to support cloud deployment.
 Improved frontend error handling to gracefully handle backend connectivity issues.
-
+For running the frontend locally, the backend API is configured as:
+API_URL = http://localhost:8000 
+Make sure the FastAPI backend is running locally before starting the frontend.
+Live Demo of Application (Frontend using Streamlit on Render):  
+https://grc-filter-task-lavesh-karadia-frontend.onrender.com
 
 Testing
 
